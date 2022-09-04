@@ -1,30 +1,31 @@
 import React from 'react';
 import logo from '../Images/Teinane-1b1b1b.svg'
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 
 const  Navbar = () => {
     return(
        <nav className='nav'>
-            <a href="/" className="logo-container">
+            <Link to="/" className="logo-container">
                 <img className="nav-logo" src={logo} alt="nav-logo" />
-            </a>
+            </Link>
 
             <ul className="nav-list">
-                <CustomLLink href="/">Home</CustomLLink>
-                <CustomLLink href="/About">About</CustomLLink>
-                <CustomLLink href="/Projects">Projects</CustomLLink>
-                <CustomLLink href="/Contact">Contact</CustomLLink>
+                <CustomLLink to="/">Home</CustomLLink>
+                <CustomLLink to="/About">About</CustomLLink>
+                <CustomLLink to="/Projects">Projects</CustomLLink>
+                <CustomLLink to="/Contact">Contact</CustomLLink>
                 
             </ul>
        </nav> 
     );
 }
 
-function CustomLLink({ href, children, ...props}) {
-    const pathName = "window.location.pathname";
-
+function CustomLLink({ to, children, ...props}) {
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
     return (
         <li>
-            <a href={href} className={pathName === href ? "active" : ""}>{children}</a>
+            <Link to={to} className = {isActive ? "active" : ""}>{children}</Link>
         </li>
     )
 }

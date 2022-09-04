@@ -1,34 +1,23 @@
 import React from 'react';
 import Navbar from './Navbar';
-import './App.css';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 import Home from '../Pages/Home';
 import Projects from '../Pages/Projects';
+import { Route, Routes} from 'react-router-dom';
 
 
 function App() {
-  let page
-  // eslint-disable-next-line default-case
-  switch (window.location.pathname) {
-    case "/": 
-      page = <Home />
-      break
-    case "/About":
-      page = <About />
-      break
-    case "/Contact":
-      page = <Contact />
-      break
-    case "/Projects":
-      page = <Projects />
-      break
-  }
   return (
     <div className="App">
       <Navbar />
       <div className="container">
-        {page}
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/About" element={<About/>} />
+          <Route path="/Projects" element={<Projects/>} />
+          <Route path="/Contact" element={<Contact/>} />
+        </Routes>
       </div>
       
     </div>
