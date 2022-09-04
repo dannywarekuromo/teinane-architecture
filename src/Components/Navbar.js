@@ -1,30 +1,31 @@
 import React from 'react';
-import logo from '../Images/Teinane-bg-1b1b1b.svg'
+import logo from '../Images/Teinane-1b1b1b.svg'
 
 const  Navbar = () => {
     return(
        <nav className='nav'>
-            <div className="logo-container">
+            <a href="/" className="logo-container">
                 <img className="nav-logo" src={logo} alt="nav-logo" />
-            </div>
+            </a>
 
             <ul className="nav-list">
-                <li className="nav-item">
-                    <a className="nav-link" href="#Home">Home</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#About">About</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#Project">Project</a>
-                </li>
+                <CustomLLink href="/">Home</CustomLLink>
+                <CustomLLink href="/About">About</CustomLLink>
+                <CustomLLink href="/Projects">Projects</CustomLLink>
+                <CustomLLink href="/Contact">Contact</CustomLLink>
+                
             </ul>
-
-            <div className="sign-in">
-                <a href="#Sign-in">Sign In</a>
-            </div>
        </nav> 
     );
 }
 
+function CustomLLink({ href, children, ...props}) {
+    const pathName = "window.location.pathname";
+
+    return (
+        <li>
+            <a href={href} className={pathName === href ? "active" : ""}>{children}</a>
+        </li>
+    )
+}
 export default Navbar;

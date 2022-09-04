@@ -6,27 +6,56 @@
   margin: 0;
 }
 
-.App {
+:root {
+  --accent-clr: rgb(136, 90, 21);
+  --primary-clr: #1b1b1b;
+  --secondary-clr: #dbdbdb;
+  --heading-ff: Playfair Display;
+  --text-ff: Poppins;
+}
 
+/* || General styles*/
+body {
+  background: var(--primary-clr);
+  margin: 0 clamp(5%, 7rem, 10%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-ff);
+}
+
+p {
+  font-family: var(--text-ff);
 }
 
 img {
   max-width: 100%;
 }
 
-li {
+ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+  font-family: var(--heading-ff);
 }
 
+/* || Utilities */
+.container {
+  margin: 1rem;
+  text-align: center;
+}
+
+/* || Navigation Component styles*/
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 7rem;
+  min-width: 100%;
+  margin: 1rem auto 0;
+  background-color: #dbdbdb;
 }
 
 .logo-container {
@@ -34,9 +63,27 @@ a {
   align-items: center;
 }
 
-.nav-list {
-  display: flex;
-  gap: 1.5rem;
+.logo-container img {
+  height: 2rem;
 }
 
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 3rem;
+}
+
+.nav-list li a {
+  color: var(--primary-clr);
+  font-weight: 600;
+}
+
+.nav-list li .active {
+  color: var(--accent-clr);
+}
+
+.nav-list li a:hover {
+  border-bottom: 3px solid var(--accent-clr);
+}
 
