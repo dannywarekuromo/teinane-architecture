@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Images/Leeway-bg-1b1b1b.svg'
+import logo from '../Images/Teinane-bg-1b1b1b.svg'
 
 const  Navbar = () => {
     return(
