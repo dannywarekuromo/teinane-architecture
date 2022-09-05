@@ -41,6 +41,12 @@ a {
   font-family: var(--heading-ff);
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* || Utilities */
 .container {
   margin: 1rem;
@@ -64,7 +70,7 @@ a {
 }
 
 .logo-container img {
-  height: 2rem;
+  height: 3rem;
 }
 
 .nav-list {
@@ -87,3 +93,20 @@ a {
   border-bottom: 3px solid var(--accent-clr);
 }
 
+.mobile-nav {
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background-color: var(--secondary-clr);
+}
+
+.mobile-nav span {
+  width: 3rem;
+  height: .3rem;
+  background: var(--primary-clr);
+  display: block;
+  border-radius: 10px;
+}

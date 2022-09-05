@@ -1,8 +1,14 @@
-import React from 'react';
-import logo from '../Images/Teinane-1b1b1b.svg'
+import React, { useState } from 'react';
+import logo from '../Images/Teinane-bg-1b1b1b.svg';
+import menu from '../Images/png/001-menu.png';
+import close from '../Images/png/002-close.png';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 
-const  Navbar = () => {
+const  Navigation = () => {
+    const [click, setClick] = useState(false);
+
+    const mobileMenu = () => setClick(!click);
+
     return(
        <nav className='nav'>
             <Link to="/" className="logo-container">
@@ -13,9 +19,12 @@ const  Navbar = () => {
                 <CustomLLink to="/">Home</CustomLLink>
                 <CustomLLink to="/About">About</CustomLLink>
                 <CustomLLink to="/Projects">Projects</CustomLLink>
-                <CustomLLink to="/Contact">Contact</CustomLLink>
-                
+                <CustomLLink to="/Contact">Contact</CustomLLink>                
             </ul>
+
+            <button className='mobile-nav' onClick={mobileMenu}>
+                <img src={click ? menu : close} alt="mobile-nav"/>
+            </button>
        </nav> 
     );
 }
@@ -29,4 +38,4 @@ function CustomLLink({ to, children, ...props}) {
         </li>
     )
 }
-export default Navbar;
+export default Navigation;
