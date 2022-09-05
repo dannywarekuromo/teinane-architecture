@@ -7,7 +7,15 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 const  Navigation = () => {
     const [click, setClick] = useState(false);
 
-    const mobileMenu = () => setClick(!click);
+    function CustomLLink({ to, children, ...props}) {
+        const resolvedPath = useResolvedPath(to)
+        const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+        return (
+            <li>
+                <Link to={to} className = {isActive ? "active" : ""} onClick={() => setClick(false)}>{children}</Link>
+            </li>
+        )
+    }
 
     return(
        <nav className='nav'>
@@ -15,27 +23,21 @@ const  Navigation = () => {
                 <img className="nav-logo" src={logo} alt="nav-logo" />
             </Link>
 
-            <ul className="nav-list">
+            <ul className={click ? 'nav-list mobile-menu' : 'nav-list'}>
                 <CustomLLink to="/">Home</CustomLLink>
                 <CustomLLink to="/About">About</CustomLLink>
                 <CustomLLink to="/Projects">Projects</CustomLLink>
                 <CustomLLink to="/Contact">Contact</CustomLLink>                
             </ul>
 
-            <button className='mobile-nav' onClick={mobileMenu}>
-                <img src={click ? menu : close} alt="mobile-nav"/>
+            <button className='mobile-nav' onClick={() => {setClick(!click)}}>
+                <img src={click ? close : menu} alt="mobile-nav"/>
             </button>
        </nav> 
     );
 }
 
-function CustomLLink({ to, children, ...props}) {
-    const resolvedPath = useResolvedPath(to)
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-    return (
-        <li>
-            <Link to={to} className = {isActive ? "active" : ""}>{children}</Link>
-        </li>
-    )
-}
+
+
+
 export default Navigation;

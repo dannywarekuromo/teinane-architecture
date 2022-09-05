@@ -16,8 +16,7 @@
 
 /* || General styles*/
 body {
-  background: var(--primary-clr);
-  margin: 0 clamp(5%, 7rem, 10%);
+  background: var(--secondary-clr);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,13 +52,19 @@ button {
   text-align: center;
 }
 
-/* || Navigation Component styles*/
+.hero {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* || Navigation*/
 .nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 7rem;
-  min-width: 100%;
+  width: 100%;
   margin: 1rem auto 0;
   background-color: #dbdbdb;
 }
@@ -93,20 +98,47 @@ button {
   border-bottom: 3px solid var(--accent-clr);
 }
 
-.mobile-nav {
-  height: 2rem;
-  display: flex;
+/* || Mobile Navigation*/
+.logo-container {
+  z-index: 100;
+}
+
+.mobile-menu {
+  position: absolute;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
   background-color: var(--secondary-clr);
 }
 
-.mobile-nav span {
-  width: 3rem;
-  height: .3rem;
-  background: var(--primary-clr);
-  display: block;
-  border-radius: 10px;
+.mobile-nav {
+  height: 2rem;
+  object-fit: contain;
+  display: none;
+  background-color: var(--secondary-clr);
+  z-index: 100;
 }
+
+/* || Home Styles*/
+#home {
+  background-color: var(--primary-clr);
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.copyright {
+  color: var(--secondary-clr);
+}
+
+.hero-svg {
+  position: absolute;
+  width: 40rem;
+
+}
+
+

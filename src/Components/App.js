@@ -6,7 +6,6 @@ import Home from '../Pages/Home';
 import Projects from '../Pages/Projects';
 import { Route, Routes} from 'react-router-dom';
 
-
 function App() {
   return (
     <div className="App">
@@ -18,8 +17,7 @@ function App() {
           <Route path="/Projects" element={<Projects/>} />
           <Route path="/Contact" element={<Contact/>} />
         </Routes>
-      </div>
-      
+      </div>      
     </div>
   );
 }
