@@ -1,4 +1,4 @@
-import Hero from "../Images/Teinane-dbdbdb.svg";
+import Hero from '../Images/Teinane-dbdbdb.svg';
 import Services from "../Components/Services";
 
 export default function Home() {
@@ -89,6 +89,7 @@ export default function Home() {
           />
         </svg>
       </div>
+      <Services />
     </>
   );
 }
