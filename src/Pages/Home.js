@@ -4,7 +4,7 @@ import Services from "../Components/Services";
 export default function Home() {
   return (
     <>
-      <div id="home" className="hero">
+      <div className="hero home">
         <img src={Hero} alt="title" />
         <div className="copyright">&copy;</div>
         <svg
