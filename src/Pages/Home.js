@@ -1,10 +1,11 @@
 import Hero from '../Images/Teinane-dbdbdb.svg';
 import Services from "../Components/Services";
+import Introduction from "../Components/Introduction"
 
 export default function Home() {
   return (
     <>
-      <div className="hero home">
+      <section className="hero home">
         <img src={Hero} alt="title" />
         <div className="copyright">&copy;</div>
         <svg
@@ -88,8 +89,9 @@ export default function Home() {
             fill="white"
           />
         </svg>
-      </div>
+      </section>
       <Services />
+      <Introduction />
     </>
   );
 }

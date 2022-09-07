@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Architecture from "../Images/Architecture.jpg";
-import Interior from "../Images/Interior.jpg";
-import Furniture from "../Images/Furniture.jpg";
-import Products from "../Images/Products.jpg";
+import Architecture from "../Images/Architecture.png";
+import Interior from "../Images/Interior.png";
+import Furniture from "../Images/Furniture.png";
+import Products from "../Images/Products.png";
 
 export default function Services() {
   function Service({ children, image }) {
@@ -14,31 +14,23 @@ export default function Services() {
     );
   }
   return (
-    <div className="services">
+    <section className="services">
       <Service>
         Architecture
-        <div className="service-iamge">
-          <img src={Architecture} alt="Architecture" />
-        </div>
+        <img src={Architecture} alt="Architecture" className="service-img" />
       </Service>
       <Service>
         Interior
-        <div>
-          <img src={Interior} alt="Interior" />
-        </div>
+        <img src={Interior} alt="Interior" className="service-img" />
       </Service>
       <Service>
         Furniture
-        <div>
-          <img src={Furniture} alt="Furniture" />
-        </div>
+        <img src={Furniture} alt="Furniture" className="service-img" />
       </Service>
       <Service>
         Products
-        <div>
-          <img src={Products} alt="Products" />
-        </div>
+        <img src={Products} alt="Products" className="service-img" />
       </Service>
-    </div>
+    </section>
   );
 }
