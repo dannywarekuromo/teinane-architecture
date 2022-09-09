@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /*outline: 2px solid limegreen !important;*/
 }
 
 :root {
@@ -16,7 +17,6 @@
 
 /* || General styles*/
 body {
-  background: var(--primary-clr);
   margin: 0 auto;
 }
 
@@ -177,4 +177,35 @@ button {
   margin: 1rem auto 0;
 }
 
+/* || Introductions */
+.introduction {
+  background: var(--secondary-clr);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  gap: 7rem;
+}
+
+.intro-text {
+  padding-right: 7rem;
+  width: 50%;
+  text-align: justify;
+}
+
+.intro-text h4 {
+  margin-bottom: 5rem;
+  color: var(--accent-clr);
+}
+
+.intro-text p {
+  margin-bottom: 5rem;
+}
+
+.intro-head {
+  padding: 5rem 0;
+  text-align: justify;
+  background: var(--secondary-clr);
+}
 

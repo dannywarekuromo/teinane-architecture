@@ -9,7 +9,7 @@ export default function Services() {
   function Service({ children, image }) {
     return (
       <Link to="/Projects" className="service">
-        <h3 className="service-head">{children}</h3>
+        <h4 className="service-head">{children}</h4>
       </Link>
     );
   }

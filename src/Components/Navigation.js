@@ -7,7 +7,7 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 const  Navigation = () => {
     const [click, setClick] = useState(false);
 
-    function CustomLLink({ to, children, ...props}) {
+    function CustomLLink({ to, children}) {
         const resolvedPath = useResolvedPath(to)
         const isActive = useMatch({ path: resolvedPath.pathname, end: true })
         return (
