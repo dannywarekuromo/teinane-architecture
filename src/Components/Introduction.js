@@ -11,9 +11,6 @@ export default function Introduction() {
         <h2>EXPERIENCE</h2>
       </div>
       <seciton className="introduction">
-        <div className="intro-img">
-          <img src={Intromage} alt="intro" />
-        </div>
         <div className="intro-text">
           <h4>ABOUT TEINANE</h4>
           <p>
@@ -26,6 +23,9 @@ export default function Introduction() {
           <h5 className="intro-link">
             <Link to="./About">KNOW MORE</Link>
           </h5>
+        </div>
+        <div className="intro-img">
+          <img src={Intromage} alt="intro" />
         </div>
       </seciton>
     </>

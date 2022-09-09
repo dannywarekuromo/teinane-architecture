@@ -120,11 +120,11 @@ button {
   z-index: 100;
 }
 
-@media screen and (max-width: 760px) {
+/*@media screen and (max-width: 760px) {
   .mobile-nav {
     display: block;
   }
-}
+}*/
 
 /* || Home Styles*/
 .home {
@@ -189,7 +189,7 @@ button {
 }
 
 .intro-text {
-  padding-right: 7rem;
+  padding-left: 7rem;
   width: 50%;
   text-align: justify;
 }
@@ -207,5 +207,7 @@ button {
   padding: 5rem 0;
   text-align: justify;
   background: var(--secondary-clr);
+  transform: translate(690px);
+  max-width: 50%;
 }
 
