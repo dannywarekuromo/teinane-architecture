@@ -4,15 +4,28 @@ import Architecture from "../Images/Architecture.png";
 import Interior from "../Images/Interior.png";
 import Furniture from "../Images/Furniture.png";
 import Products from "../Images/Products.png";
+import Search from "../Images/png/003-search.png";
 
 export default function Services() {
-  function Service({ children, image }) {
+  function Layer() {
     return (
-      <Link to="/Projects" className="service">
-        <h4 className="service-head">{children}</h4>
-      </Link>
+      <div className="layer">
+        <Link to="/Projects">
+          <img src={Search} alt="Search" className="service-search" />
+        </Link>
+      </div>
     );
   }
+
+  function Service({ children, image }) {
+    return (
+      <div className="service">
+        <Layer />
+        <h4 className="service-head">{children}</h4>
+      </div>
+    );
+  }
+
   return (
     <section className="services">
       <Service>

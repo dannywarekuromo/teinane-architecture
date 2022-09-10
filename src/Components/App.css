@@ -8,7 +8,7 @@
 }
 
 :root {
-  --accent-clr: rgb(136, 90, 21);
+  --accent-clr: rgb(141, 105, 51);
   --primary-clr: #1b1b1b;
   --secondary-clr: #dbdbdb;
   --heading-ff: Playfair Display;
@@ -168,6 +168,7 @@ button {
 }
 
 .service {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -175,6 +176,25 @@ button {
 .service-img {
   display: block;
   margin: 1rem auto 0;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layer a {
+  background: var(--accent-clr);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 /* || Introductions */
@@ -204,10 +224,9 @@ button {
 }
 
 .intro-head {
-  padding: 5rem 0;
+  padding: 5rem 0 5rem 690px;
   text-align: justify;
   background: var(--secondary-clr);
-  transform: translate(690px);
-  max-width: 50%;
+  /*transform: translate(690px);*/
 }
 
