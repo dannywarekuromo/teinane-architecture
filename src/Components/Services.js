@@ -9,11 +9,11 @@ import Search from "../Images/png/003-search.png";
 export default function Services() {
   function Layer() {
     return (
-      <div className="layer">
-        <Link to="/Projects">
+      <Link className="layer" to="/Projects">
+        <div className="search-div">
           <img src={Search} alt="Search" className="service-search" />
-        </Link>
-      </div>
+        </div>
+      </Link>
     );
   }
 
