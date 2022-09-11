@@ -156,6 +156,7 @@ button {
   justify-content: center;
   background: var(--primary-clr);
   padding: 2rem 0 1rem;
+  overflow: hidden;
 }
 
 .service-head {
@@ -182,6 +183,7 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,12 +197,62 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: all 1s ease-in-out;
+  visibility: hidden;
+  transition: ease-in-out;
+  position: relative;
+}
+
+.search-div::before {
+  content: " ";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: solid 2px var(--accent-clr);
+  animation-name: pulsate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.search-div::after {
+  content: " ";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: solid 2px var(--accent-clr);
+  animation-name: pulsate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: .5s;
+}
+
+@keyframes pulsate {
+  0% {
+    width: 150%;
+    height: 150%;
+  } 20% {
+    width: 250%;
+    height: 250%;
+  } 40% {
+    width: 350%;
+    height: 350%;
+  } 60% {
+    width: 250%;
+    height: 250%;
+  } 80% {
+    width: 150%;
+    height: 150%;
+  } 100% {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .layer:hover .search-div {
-  background-color: blue;
+  visibility: visible;
 }
+
 
 /* || Introductions */
 .introduction {
