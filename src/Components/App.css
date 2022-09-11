@@ -120,12 +120,6 @@ button {
   z-index: 100;
 }
 
-/*@media screen and (max-width: 760px) {
-  .mobile-nav {
-    display: block;
-  }
-}*/
-
 /* || Home Styles*/
 .home {
   background-color: var(--primary-clr);
@@ -210,7 +204,7 @@ button {
   border-radius: 50%;
   border: solid 2px var(--accent-clr);
   animation-name: pulsate;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
@@ -222,7 +216,7 @@ button {
   border-radius: 50%;
   border: solid 2px var(--accent-clr);
   animation-name: pulsate;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-delay: .5s;
 }
