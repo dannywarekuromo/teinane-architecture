@@ -281,3 +281,33 @@ button {
   /*transform: translate(690px);*/
 }
 
+/* || Footer*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  background: var(--primary-clr);
+  padding: 0 5rem;
+}
+
+footer img {
+  opacity: .8;
+}
+
+.footer-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-list a {
+  color: var(--secondary-clr);
+  font-weight: 600;
+  opacity: .8;
+}
+
+.disclaimer {
+  color: var(--secondary-clr);
+  opacity: .5;
+}

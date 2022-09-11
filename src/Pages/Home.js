@@ -1,6 +1,7 @@
 import Hero from '../Images/Teinane-dbdbdb.svg';
 import Services from "../Components/Services";
-import Introduction from "../Components/Introduction"
+import Introduction from "../Components/Introduction";
+import Footer from "../Components/Footer";
 
 export default function Home() {
   return (
@@ -92,6 +93,7 @@ export default function Home() {
       </section>
       <Services />
       <Introduction />
+      <Footer />
     </>
   );
 }
