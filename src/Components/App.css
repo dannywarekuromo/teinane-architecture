@@ -20,11 +20,6 @@ body {
   margin: 0 auto;
 }
 
-section {
-  width: 100%;
-  max-height: 100vh;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-ff);
 }
@@ -53,24 +48,20 @@ button {
 }
 
 /* || Utilities */
-.container {
-  margin: 1rem;
-  text-align: center;
-}
-
-.hero {
-  width: 100%;
-}
 
 /* || Navigation*/
 .nav {
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.3rem 7rem;
-  width: 100%;
-  margin: 1rem auto 0;
+  padding: 0 5rem;
+  width: 80%;
+  height: 80px;
+  margin: 1rem auto;
   background-color: #dbdbdb;
+  z-index: 100;
+  transform: translate(8.8rem);
 }
 
 .logo-container {
@@ -103,10 +94,6 @@ button {
 }
 
 /* || Mobile Navigation*/
-.logo-container {
-  z-index: 100;
-}
-
 .mobile-menu {
   position: absolute;
   flex-direction: column;
@@ -128,7 +115,7 @@ button {
 /* || Home Styles*/
 .home {
   background-color: var(--primary-clr);
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,23 +141,24 @@ button {
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   background: var(--primary-clr);
-  padding: 2rem 0 1rem;
+  padding: 2rem .5rem;
   overflow: hidden;
 }
 
 .service-head {
-  width: 100%;
-  margin: 0 auto;
   align-items: center;
   color: var(--secondary-clr);
   background: var(--primary-clr);
   letter-spacing: 1px;
+  width: 100%;
+  text-transform: uppercase;
 }
 
 .service {
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
 }
 
 .service-img {
@@ -282,7 +270,7 @@ button {
 }
 
 .intro-head {
-  padding: 5rem 0 5rem 690px;
+  padding: 5rem 0 5rem 710px;
   text-align: justify;
   background: var(--secondary-clr);
   /*transform: translate(690px);*/
