@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 export default function Home() {
   return (
     <>
-      <section className="hero home">
+      <section className="home">
         <img src={Hero} alt="title" />
         <div className="copyright">&copy;</div>
         <svg
