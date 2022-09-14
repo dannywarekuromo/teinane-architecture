@@ -3,13 +3,10 @@ import Intromage from "../Images/Introduction.jpg";
 import { Link } from "react-router-dom";
 
 export default function Introduction() {
+
   return (
     <>
-      <div className="intro-head">
-        <h2>ECCENTRIC</h2>
-        <h2>MINIMAL</h2>
-        <h2>EXPERIENCE</h2>
-      </div>
+      <IntroHead />
       <seciton className="introduction">
         <div className="intro-text">
           <h4>ABOUT TEINANE</h4>
@@ -30,4 +27,14 @@ export default function Introduction() {
       </seciton>
     </>
   );
+
+  function IntroHead() {
+    return(
+      <div className="intro-head">
+        <h2>ECCENTRIC</h2>
+        <h2>MINIMAL</h2>
+        <h2>EXPERIENCE</h2>
+      </div>
+    )
+  }
 }

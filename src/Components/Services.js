@@ -6,17 +6,26 @@ import Furniture from "../Images/Furniture.png";
 import Products from "../Images/Products.png";
 import Search from "../Images/png/003-search.png";
 
-function Layer() {
-  return (
-    <Link className="layer" to="/Projects">
-      <div className="search-div">
-        <img src={Search} alt="Search" className="service-search" />
-      </div>
-    </Link>
-  );
-}
-
 export default function Services() {
+
+  return (
+    <section className="services">
+      <Service head="Architecture" source={Architecture} alternate="Architecture"/>
+      <Service head="Interior" source={Interior} alternate="Interior"/>
+      <Service head="Furniture" source={Furniture} alternate="Furniture"/>
+      <Service head="Products" source={Products} alternate="Products"/>
+    </section>
+  );
+
+  function Layer() {
+    return (
+      <Link className="layer" to="/Projects">
+        <div className="search-div">
+          <img src={Search} alt="Search" className="service-search" />
+        </div>
+      </Link>
+    );
+  }
 
   function Service(props) {
     return (
@@ -27,13 +36,4 @@ export default function Services() {
       </div>
     );
   }
-
-  return (
-    <section className="services">
-      <Service head="Architecture" source={Architecture} alternate="Architecture"/>
-      <Service head="Interior" source={Interior} alternate="Interior"/>
-      <Service head="Furniture" source={Furniture} alternate="Furniture"/>
-      <Service head="Products" source={Products} alternate="Products"/>
-    </section>
-  );
 }
