@@ -33,7 +33,7 @@ export default function Introduction() {
       <div className="intro-head">
         <h2>ECCENTRIC</h2>
         <h2>MINIMAL</h2>
-        <h2>EXPERIENCE</h2>
+        <h2>EXPERTISE</h2>
       </div>
     )
   }
