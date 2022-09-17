@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Architecture from "../Images/Architecture.png";
 import Interior from "../Images/Interior.png";
@@ -7,6 +7,7 @@ import Products from "../Images/Products.png";
 import Search from "../Images/png/003-search.png";
 
 export default function Services() {
+  const [hover, setHover] = useState(null);
 
   return (
     <section className="services">
@@ -19,8 +20,8 @@ export default function Services() {
 
   function Layer() {
     return (
-      <Link className="layer" to="/Projects">
-        <div className="search-div">
+      <Link className="layer" onMouseEnter={() => {setHover(true)}} to="/Projects">
+        <div className={hover ? "active" : ""}>
           <img src={Search} alt="Search" className="service-search" />
         </div>
       </Link>

@@ -6,13 +6,6 @@ import Footer from "../Components/Footer";
 export default function Home() {
   return (
     <>
-      <header>
-        <div>
-          <p>Architecture</p>
-          <p>& Design.</p>
-        </div>
-        <button>Blog Update</button>
-      </header>
       <section className="home">
         <img src={Hero} alt="title" />
         <div className="copyright">&copy;</div>
