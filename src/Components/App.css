@@ -83,6 +83,7 @@ button {
 .nav-list li a {
   color: var(--secondary-clr);
   opacity: .4;
+  transition: all .5s ease-in-out;
 }
 
 .nav-list li .active {
@@ -94,6 +95,7 @@ button {
 
 .nav-list li a:hover {
   opacity: 1;
+  font-size: larger;
 }
 
 /* || Mobile Navigation*/

@@ -7,7 +7,7 @@ import Products from "../Images/Products.png";
 import Search from "../Images/png/003-search.png";
 
 export default function Services() {
-  const [hover, setHover] = useState(null);
+  const [hover, setHover] = useState(false);
 
   return (
     <section className="services">
