@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import menu from "../Images/png/001-menu.png";
 import close from "../Images/png/002-close.png";
+import "./Navigation.css";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 const Navigation = () => {
@@ -24,8 +25,7 @@ const Navigation = () => {
   return (
     <nav className="nav">
       <Link to="/" className="logo-container">
-        <p>design &</p>
-        <p>architecture.</p>
+        <p className="nav-logo">Teinane</p>
       </Link>
 
       <ul className={click ? "nav-list mobile-menu" : "nav-list"}>

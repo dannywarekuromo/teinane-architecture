@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../Images/Teinane-dbdbdb.svg";
+import Logo from "./Images/Teinane-dbdbdb.svg";
 import {Link} from "react-router-dom";
 
 const Footer = () => {

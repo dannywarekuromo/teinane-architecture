@@ -1,5 +1,5 @@
 import React from "react";
-import Intromage from "../Images/Introduction.jpg";
+import Intromage from "./Images/Introduction.jpg";
 import { Link } from "react-router-dom";
 
 export default function Introduction() {
