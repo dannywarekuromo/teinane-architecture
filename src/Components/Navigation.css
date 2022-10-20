@@ -47,7 +47,6 @@
     background-color: transparent;
     color: var(--secondary-clr);
     transition: all .7s ease-in-out;
-    font-family:'Poppins', Arial, sans-serif;
     text-transform: uppercase;
   }
 

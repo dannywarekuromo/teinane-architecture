@@ -1,19 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@200;400&display=swap');
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  
+
   /*outline: 2px solid limegreen !important;*/
 }
 
 :root {
+  /* || Colors*/
   --accent-clr: rgb(141, 105, 51);
   --primary-clr: #0d0d0d;
   --secondary-clr: #dbdbdb;
-  --heading-ff: Playfair Display;
-  --text-ff: Poppins;
+  /* || Font family*/
+  --text-ff: "Poppins", Arial, sans-serif;
+  /* || Font size*/
+  --biggest-fs: 4rem;
+  --h1-fs: 2.25rem;
+  --h2-fs: 1.5rem;
+  --h3-fs: 1.25rem;
+  --normal-fs: 1rem;
+  --small-fs: 0.875rem;
+  --smaller-fs: 0.813rem;
+  /* ||White-space*/
+  --ws-1: 0.5rem;
+  --ws-2: 1rem;
+  --ws-3: 1.5rem;
+  --ws-4: 2rem;
+  --ws-5: 2.5rem;
+  --ws-6: 3rem;
+  --ws-adjustable: 10%;
 }
 
 /* || General styles*/
@@ -21,16 +36,21 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--text-ff);
-
 }
 
 p {
   font-family: var(--text-ff);
 }
 
-img {
+img,
+video {
   max-width: 100%;
 }
 
@@ -61,11 +81,11 @@ button {
   width: 100%;
   height: fit-content;
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   background: var(--primary-clr);
-  padding: 2rem .5rem;
+  padding: 2rem 0.5rem;
   overflow: hidden;
 }
 
@@ -137,26 +157,31 @@ button {
   animation-name: pulsate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 @keyframes pulsate {
   0% {
     width: 250%;
     height: 250%;
-  } 20% {
+  }
+  20% {
     width: 450%;
     height: 450%;
-  } 40% {
+  }
+  40% {
     width: 550%;
     height: 550%;
-  } 60% {
+  }
+  60% {
     width: 450%;
     height: 450%;
-  } 80% {
+  }
+  80% {
     width: 350%;
     height: 350%;
-  } 100% {
+  }
+  100% {
     width: 100%;
     height: 100%;
   }
@@ -165,7 +190,6 @@ button {
 .layer:hover .active {
   visibility: visible;
 }
-
 
 /* || Introductions */
 .introduction {
@@ -204,9 +228,7 @@ button {
 }
 
 .intro-head h2 {
-  margin-bottom: .9rem;
+  margin-bottom: 0.9rem;
 }
 
 /* || Contact Us*/
-
-
