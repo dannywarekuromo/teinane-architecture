@@ -35,6 +35,8 @@ const Navigation = () => {
         <CustomLLink to="/Contact">Contact</CustomLLink>
       </ul>
 
+      <Link className="nav-cta" to="/Contact">Schedule Appointment</Link>
+
       <button
         className="mobile-nav"
         onClick={() => {

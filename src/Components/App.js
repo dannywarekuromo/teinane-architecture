@@ -1,9 +1,10 @@
 import React from 'react';
-import Navigation from './Navigation/Navigation';
-import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
-import Home from './Pages/Home/Home';
-import Projects from './Pages/Projects/Projects';
+import Navigation from './Navigation';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Home from './Pages/Home';
+import Footer from './Footer';
+import Projects from './Pages/Projects';
 import { Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
           <Route path="/Projects" element={<Projects/>} />
           <Route path="/Contact" element={<Contact/>} />
         </Routes>
-      </div>  
+      </div> 
+      <Footer /> 
     </div>
   );
 }

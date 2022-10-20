@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
   /*outline: 2px solid limegreen !important;*/
 }
 
@@ -51,19 +52,9 @@ button {
 /* || Utilities */
 .container {
   width: 100%;
+  padding: 2rem 5rem;
+  background: var(--primary-clr);
 }
-
-#logo-svg {
-  position: absolute;
-  max-height: 100%;
-}
-
-
-
-
-
-/* || Hero Styles*/
-
 
 /* || Services*/
 .services {
