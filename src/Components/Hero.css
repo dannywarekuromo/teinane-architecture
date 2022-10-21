@@ -1,0 +1,15 @@
+.hero-container {
+    padding-bottom: var(--ws-4);
+}
+
+.hero-container h1 {
+    font-size: var(--biggest-fs);
+    color: var(--secondary-clr);
+}
+
+.hero-services p {
+    color: var(--secondary-clr);
+    opacity: 0.7;
+    line-height: 1.6;
+    padding-top: var(--ws-4);
+}

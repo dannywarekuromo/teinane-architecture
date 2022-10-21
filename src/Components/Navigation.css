@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem;
+    padding: 1rem var(--ws-adjustable);
     width: 100%;
     height: 100px;
     background-color: var(--primary-clr);
@@ -13,22 +13,24 @@
   
   .logo-container p {
     color: var(--secondary-clr);
-    font-size: 23px;
-    font-family:'Poppins', Arial, sans-serif;
+    font-size: var(--h2-fs);
+    font-weight: 600;
   }
   
   
   .nav-list {
     display: flex;
     align-items: center;
-    justify-content: center;
     column-gap: 2rem
   }
 
   .nav-list a {
-    font-family:'Poppins', Arial, sans-serif;
     color: var(--secondary-clr);
     opacity: 0.7;
+    transition: all 0.3s ease-out;
+    text-transform: uppercase;
+    margin-right: var(--ws-6);
+    font-size: var(--small-fs);
   }
 
   .nav-list a:hover {
@@ -46,8 +48,9 @@
     padding: 10px 1rem;
     background-color: transparent;
     color: var(--secondary-clr);
-    transition: all .7s ease-in-out;
+    transition: all 0.3s ease-in-out;
     text-transform: uppercase;
+    font-size: var(--small-fs);
   }
 
   .nav-cta:hover {

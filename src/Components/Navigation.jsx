@@ -25,14 +25,13 @@ const Navigation = () => {
   return (
     <nav className="nav">
       <Link to="/" className="logo-container">
-        <p className="nav-logo">Teinane</p>
+        <p className="nav-logo">Tein.</p>
       </Link>
 
       <ul className={click ? "nav-list mobile-menu" : "nav-list"}>
         <CustomLLink to="/">Home</CustomLLink>
         <CustomLLink to="/About">About</CustomLLink>
         <CustomLLink to="/Projects">Projects</CustomLLink>
-        <CustomLLink to="/Contact">Contact</CustomLLink>
       </ul>
 
       <Link className="nav-cta" to="/Contact">Schedule Appointment</Link>

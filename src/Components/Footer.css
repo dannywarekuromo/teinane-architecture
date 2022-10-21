@@ -6,7 +6,7 @@ footer {
     width: 100%;
     height: 10rem;
     background: var(--primary-clr);
-    padding: 0 5rem;
+    padding: 0 var(--ws-adjustable);
   }
   
   footer img {
