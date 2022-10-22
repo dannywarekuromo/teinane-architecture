@@ -12,7 +12,7 @@ const Hero = () => {
           and progressive structure.
         </h1>
         <div className="hero-services">
-          <p>We take architecture through the extra mile <br/>
+          <p>Taking architecture through the extra mile <br/>
           to bring about new experiences in familiar ways.</p>
         </div>  
       </div>

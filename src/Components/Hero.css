@@ -5,6 +5,7 @@
 .hero-container h1 {
     font-size: var(--biggest-fs);
     color: var(--secondary-clr);
+    font-weight: 400;
 }
 
 .hero-services p {

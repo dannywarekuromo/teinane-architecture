@@ -19,7 +19,7 @@ const Info = () => {
     <section id="info">
       <div className="info-container">
         <h1 className="info-header">
-          We champion <br />
+          We leverage<br />
           the eccentric to achieve <br />
           the extraordinaire
         </h1>
@@ -30,18 +30,18 @@ const Info = () => {
       <div className="info-card-container">
         <InfoCard
           title="Years Experience"
-          digit="10"
+          digit="7"
           text="Established in the year 2012, in the midst of the great architectural decay."
         />
         <InfoCard
           title="Completed Projects"
-          digit="68"
-          text="Uncompromising on quality, customer satisfaction is paramount."
+          digit="45"
+          text="Over three dozen contracts to our name, our work does the talking."
         />
         <InfoCard
-          title="Winning Awards"
-          digit="14"
-          text="Over a dozen awards to our name, our work does the talking. Always."
+          title="Quality Assurance"
+          digit="110%"
+          text="Uncompromising on quality, customer satisfaction is paramount."
         />
       </div>
     </section>
