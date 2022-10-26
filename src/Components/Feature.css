@@ -28,7 +28,6 @@
     font-family: var(--text-ff);
     font-size: var(--smaller-fs);
     text-transform: uppercase;
-    opacity: 0.7;
 }
 
 .feature-desc {
