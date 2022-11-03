@@ -83,6 +83,12 @@ button {
   outline: none;
 }
 
+input, textarea {
+  display: block;
+  outline: none;
+  border: none;
+}
+
 /* || Utilities */
 .container {
   width: 100%;

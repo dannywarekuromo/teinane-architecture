@@ -1,19 +1,9 @@
 import React from "react";
+import InfoCard from "./InfoCard";
 import "./Feature.css";
 import minimo from "../Assets/Images/Minimo.jpg";
 
 const Feature = () => {
-  function FeatureCard(props) {
-    return (
-      <div className="feature-card">
-        <ul className="feature-title">
-          <li className="feature-item">{props.title}</li>
-        </ul>
-        <p className="feature-desc">{props.desc}</p>
-        <p className="feature-text">{props.text}</p>
-      </div>
-    );
-  }
 
   return (
     <section id="feature">
@@ -22,11 +12,16 @@ const Feature = () => {
           <img src={minimo} alt="furniture-project" />
         </div>
         <div className="feature-card-container">
-          <FeatureCard
+          <InfoCard
             title="Featured Project"
             desc="Minimo: Home Away"
             text="An ultra-modern pad, designed with the classic minimal aesthetic, showcasing sentiments of individual pieces."
-          /> 
+            infoCard="feature-card"
+            infoTitle="feature-title"
+            infoItem="feature-item"
+            infoDesc="feature-desc"
+            infoText="feature-text"
+          />
           {/*Add Previous and Next Buttons for secondary interaction*/}
         </div>
       </div>
