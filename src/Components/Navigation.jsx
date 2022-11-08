@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import menu from "../Assets/Images/png/001-menu.png";
 import close from "../Assets/Images/png/002-close.png";
-import "./Navigation.css";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 const Navigation = () => {
@@ -24,17 +23,19 @@ const Navigation = () => {
 
   return (
     <nav className="nav">
+      <Link to="/" className="services">
+        DESIGN,ARCHITECTURE
+      </Link>
+
       <Link to="/" className="logo-container">
-        <p className="nav-logo">Tein.</p>
+        <h3>TE<i>INA</i>NE</h3> {/*Logo image is best suited */}
       </Link>
 
       <ul className={click ? "nav-list mobile-menu" : "nav-list"}>
-        <CustomLLink to="/">Home</CustomLLink>
-        <CustomLLink to="/About">About</CustomLLink>
         <CustomLLink to="/Projects">Projects</CustomLLink>
-      </ul>
-
-      <Link className="nav-cta" to="/Contact">Schedule Appointment</Link>
+        <CustomLLink to="/About">About</CustomLLink>
+        <CustomLLink to="/Contact">Contact</CustomLLink>
+      </ul> 
 
       <button
         className="mobile-nav"

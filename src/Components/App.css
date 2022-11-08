@@ -10,17 +10,18 @@
   /* || Colors*/
   --accent-clr: #b68f56;
   --primary-clr: #0d0d0d;
-  --secondary-clr: #dbdbdb;
+  --secondary-clr: #fff9eb;
   /* || Font family*/
-  --text-ff: "Poppins", Arial, sans-serif;
+  --head-ff: "Playfair Display", serif;
+  --body-ff: "Poppins", Arial, sans-serif;
   /* || Font size*/
-  --biggest-fs: 4rem;
-  --h1-fs: 3.25rem;
-  --h2-fs: 1.5rem;
-  --h3-fs: 1.25rem;
-  --normal-fs: 1rem;
-  --small-fs: 0.875rem;
-  --smaller-fs: 0.713rem;
+  --large-fs: 4rem;
+  --heading1-fs: 2.25rem;
+  --heading2-fs: 1.25rem;
+  --heading3-fs: 1rem;
+  --headline-fs: 0.938rem;
+  --body-fs: 0.8135rem;
+  --subheadline-fs: 0.75rem;
   /* ||White-space*/
   --ws-1: 0.5rem;
   --ws-2: 1rem;
@@ -31,6 +32,18 @@
   --ws-adjustable: 10%;
 }
 
+@media screen and (min-width: 600px) {
+  :root {
+    --large-fs: 15rem;
+    --heading1-fs: 7.25rem;
+    --heading2-fs: 2.3rem;
+    --heading3-fs: 1.9rem;
+    --headline-fs: 1rem;
+    --body-fs: 0.875rem;
+    --subheadline-fs: 0.713rem;
+  }
+}
+
 /* || General styles*/
 body {
   margin: 0 auto;
@@ -38,28 +51,26 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--text-ff);
+h3 {
+  font-family: var(--head-ff);
 }
 
 h1 {
-  font-size: var(--h1-fs);
+  font-size: var(--heading1-fs);
 }
 
 h2 {
-  font-size: var(--h2-fs);
+  font-size: var(--heading2-fs);
 }
 
 h3 {
-  font-size: var(--h3-fs);
+  font-size: var(--heading3-fs);
 }
 
 p {
-  font-family: var(--text-ff);
+  font-family: var(--body-ff);
   font-size: var(--normal-fs);
+  line-height: 1.5;
 }
 
 img,
@@ -83,8 +94,8 @@ button {
   outline: none;
 }
 
-input, textarea {
-  display: block;
+input,
+textarea {
   outline: none;
   border: none;
 }
@@ -92,12 +103,11 @@ input, textarea {
 /* || Utilities */
 .container {
   width: 100%;
-  padding: var(--ws-adjustable) var(--ws-adjustable) 0 var(--ws-adjustable);
-  background: var(--primary-clr);
+  padding: 0 var(--ws-adjustable);
+  background: var(--secondary-clr);
 }
 
 section {
   padding-bottom: var(--ws-adjustable);
   height: fit-content;
 }
-

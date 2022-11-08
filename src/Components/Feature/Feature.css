@@ -1,0 +1,49 @@
+.feature-container {
+    width: 100%;
+}
+
+.feature-index-1 {
+    display: flex;
+    gap: var(--ws-4);
+    width: 70%;
+    padding-left: 6.4rem;
+}
+
+.feature-index-1 img{
+    height: 560px;
+}
+
+.feature-index-2 {
+    position: relative;
+    right: -640px;
+    top: -150px;
+}
+
+.feature-index-2 img{
+    height: 470px;
+}
+
+.feature-index-3 img{
+    height: 560px;
+}
+
+.feature-index-4 img{
+    height: 560px;
+}
+
+.project-index {
+    font-size: var(--large-fs);
+}
+
+.styled-index {
+    font-size: var(--heading1-fs);
+}
+
+.styled-context {
+    display: flex;
+    align-items: center;
+}
+
+.styled-context h2 {
+    font-size: var(--heading3-fs);
+}

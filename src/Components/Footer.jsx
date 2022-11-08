@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../Assets/Images/Teinane-dbdbdb.svg";
-import "./Footer.css";
 import {Link} from "react-router-dom";
 
 const Footer = () => {

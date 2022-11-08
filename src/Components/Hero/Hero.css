@@ -1,0 +1,51 @@
+.hero-header {
+    font-size: var(--large-fs);
+    text-align: center;
+}
+
+
+.hero-services {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -90px;
+    color: var(--secondary-clr);
+    padding: 0 var(--ws-4);
+    box-shadow: inset 213px 314px 213px 304px var(--primary-clr);
+}
+
+.hero-statement {
+    width: 30%;
+}
+
+.hero-statement p {
+    text-align: justify;
+}
+
+.est-year {
+    font-size: var(--headline-fs);
+    padding-bottom: var(--ws-1);
+}
+
+.est-address {
+    font-size: var(--subheadline-fs);
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero-about {
+    width: 40%;
+}
+
+.hero-about h3 {
+    text-align: left;
+}
+
+.hero-about-context {
+    width: 50%;
+}

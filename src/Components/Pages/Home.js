@@ -1,16 +1,12 @@
 import React from "react";
-import Hero from "../Hero";
-import Info from "../Info";
-import Feature from "../Feature";
-import HomeContact from "../HomeContact";
+import Hero from "../Hero/Hero";
+import Feature from "../Feature/Feature";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Info />
       <Feature />
-      <HomeContact />
     </>
   );
 }

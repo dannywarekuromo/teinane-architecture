@@ -1,5 +1,4 @@
 import React from "react";
-import "./InfoCard.css";
 
 const InfoCard = ( {title, desc, text, infoCard, infoTitle, infoItem, infoDesc, infoText} ) => {
   return (
