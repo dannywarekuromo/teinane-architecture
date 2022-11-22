@@ -1,113 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins&display=swap');
+
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
-
-  /*outline: 2px solid limegreen !important;*/
+  box-sizing: border-box;
+  /*outline: 2px solid limegreen;*/
 }
 
 :root {
-  /* || Colors*/
-  --accent-clr: #b68f56;
-  --primary-clr: #0d0d0d;
-  --secondary-clr: #fff9eb;
-  /* || Font family*/
-  --head-ff: "Playfair Display", serif;
-  --body-ff: "Poppins", Arial, sans-serif;
-  /* || Font size*/
-  --large-fs: 4rem;
-  --heading1-fs: 2.25rem;
-  --heading2-fs: 1.25rem;
-  --heading3-fs: 1rem;
-  --headline-fs: 0.938rem;
-  --body-fs: 0.8135rem;
-  --subheadline-fs: 0.75rem;
-  /* ||White-space*/
-  --ws-1: 0.5rem;
+  --accent-clr: #a32727;
+  --primary-clr: #f5e9e9;
+  --secondary-clr: #302727;
+
+  --body-ff: 'Poppins', sans-serif;
+  --heading-ff: 'Playfair Display', serif;
+
+  --ws-1: .5rem;
   --ws-2: 1rem;
   --ws-3: 1.5rem;
   --ws-4: 2rem;
   --ws-5: 2.5rem;
   --ws-6: 3rem;
-  --ws-adjustable: 10%;
+  --ws-auto: 10vw;
 }
 
-@media screen and (min-width: 600px) {
-  :root {
-    --large-fs: 15rem;
-    --heading1-fs: 7.25rem;
-    --heading2-fs: 2.3rem;
-    --heading3-fs: 1.9rem;
-    --headline-fs: 1rem;
-    --body-fs: 0.875rem;
-    --subheadline-fs: 0.713rem;
-  }
+.container {
+  background-color: var(--primary-clr);
 }
 
-/* || General styles*/
-body {
-  margin: 0 auto;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--head-ff);
-}
-
-h1 {
-  font-size: var(--heading1-fs);
-}
-
-h2 {
-  font-size: var(--heading2-fs);
-}
-
-h3 {
-  font-size: var(--heading3-fs);
-}
-
-p {
-  font-family: var(--body-ff);
-  font-size: var(--normal-fs);
-  line-height: 1.5;
-}
-
-img,
-video {
-  max-width: 100%;
-}
-
-ul {
+li {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-  font-family: var(--text-ff);
-  outline: none;
 }
 
 button {
   cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-input,
-textarea {
-  outline: none;
-  border: none;
-}
-
-/* || Utilities */
-.container {
-  width: 100%;
-  padding: 0 var(--ws-adjustable);
-  background: var(--secondary-clr);
-}
-
-section {
-  padding-bottom: var(--ws-adjustable);
-  height: fit-content;
 }
