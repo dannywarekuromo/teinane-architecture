@@ -8,6 +8,7 @@ import Projects from "./Pages/Projects";
 import Optima from "./Pages/Optima";
 import JungleFever from "./Pages/JungleFever";
 import LumberJack from "./Pages/LumberJack";
+import CustomCursor from "./CustomCursor/CustomCursor";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <CustomCursor />
         <Navigation />
         <div className="container">
           <Routes>

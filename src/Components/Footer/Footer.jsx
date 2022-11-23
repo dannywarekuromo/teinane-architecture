@@ -37,10 +37,20 @@ const Footer = () => {
         <Link
           to="/Contact" className={hover ? " " : "on-hover"}
           onMouseEnter={ () => {setHover(!hover) }}
-          onMouseLeave={ () => {setHover(!hover) }}
-        >
+          onMouseLeave={ () => {setHover(!hover) }}>
           Get in touch
         </Link>
+      </div>
+      <div className="footer-nav">
+        <div className="footer-year"><p>&copy;2020 TEINANE</p></div>
+        <div className="footer-t-c">
+          <Link to="/">Term of Use</Link>
+          <Link to="/">Privacy Policy</Link>
+          <Link to="/">License</Link>
+        </div>
+        <div className="footer-translation">
+          <Link to="/">English</Link>
+        </div>
       </div>
     </footer>
   );
