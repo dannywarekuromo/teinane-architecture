@@ -28,22 +28,15 @@
     background-attachment: fixed;
     display: flex;
     align-items: flex-end;
-    padding: 0 7% 3rem;
-}
-
-.hero-text {
-    font-family: var(--body-ff);
-    font-size: 16px;
-    color: var(--secondary-clr);
 }
 
 .hero-value-wrapper {
-    text-align: left;
-    padding: 6rem;
+    padding: 6rem var(--ws-auto);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-
+    gap: var(--ws-2);
+    text-align: left;
 }
 
 .hero-value {
@@ -52,3 +45,8 @@
     color: var(--secondary-clr);
 }
 
+.hero-text {
+    font-family: var(--body-ff);
+    font-size: 16px;
+    color: var(--secondary-clr);
+}

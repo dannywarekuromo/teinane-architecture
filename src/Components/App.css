@@ -34,8 +34,14 @@ li {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 button {
   cursor: pointer;
+  outline: none;
+}
+
+img {
+  min-width: 100%;
 }

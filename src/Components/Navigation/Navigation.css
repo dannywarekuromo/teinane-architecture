@@ -30,8 +30,8 @@
     transition: .5s ease-in-out;
 }
 
-.nav-link:hover {
-    border-bottom: 2px solid var(--secondary-clr);
+.nav-link:hover ~ .app-cursor {
+    transform: scale(4);
 }
 
 .nav-link.active {

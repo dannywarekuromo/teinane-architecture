@@ -1,19 +1,12 @@
 .app-cursor {
     border-radius: 50%;
-    border: 1px solid var(--secondary-clr);
-    width: 80px;
-    height: 80px;
-    z-index: 1000;
+    background-image: radial-gradient(rgba(163, 39, 39, .7),rgba(163, 39, 39, 0),rgba(163, 39, 39, 0));
+    mix-blend-mode: color-burn;
+    width: 350px;
+    height: 350px;
     position: fixed;
-    pointer-events: none;
     overflow: hidden;
+    pointer-events: none;
     transform: translate3d(0, 0, 0);
-    transition-duration: 200ms;
-}
-
-.app-cursor-gradient {
-    width: 200px;
-    height: 200px;
-    border: none;
-    background-image: radial-gradient(#e78b8b 10%, #ee8181 20%, #f5e9e9 70%);
+    transition: 400ms;
 }

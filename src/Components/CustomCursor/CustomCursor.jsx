@@ -10,7 +10,7 @@ const CustomCursor = () => {
             const {clientX, clientY} = e;
             const mouseX = clientX - cursorRef.current.clientWidth / 2;
             const mouseY = clientY - cursorRef.current.clientHeight / 2;
-            cursorRef.current.style.transform = `translate3d(${mouseX}px ,${mouseY}px, 0)`
+            cursorRef.current.style.transform = `translate3d(${mouseX}px ,${mouseY}px, 0)`;
         })
     }, [])
   
