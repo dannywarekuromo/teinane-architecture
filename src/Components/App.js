@@ -1,38 +1,70 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Navigation from "./Navigation/Navigation";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 import Footer from "./Footer/Footer";
 import Projects from "./Pages/Projects";
-import Optima from "./Pages/Optima";
-import JungleFever from "./Pages/JungleFever";
-import LumberJack from "./Pages/LumberJack";
+import MinimoOptique from "./Pages/MinimoOptique";
+import SeaFront from "./Pages/SeaFront";
+import CaneBack from "./Pages/CaneBack";
+import CubicVolume from "./Pages/CubicVolume";
 import CustomCursor from "./CustomCursor/CustomCursor";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
-
 function App() {
+  const [preloader, setPreloader] = useState(true);
+
+  const [timer, setTimer] = useState(6);
+
+  const id = useRef(null);
+
+  const clear = () => {
+    window.clearInterval(id.current);
+    setPreloader(false);
+  }
+
+  useEffect(() => {
+    id.current = window.setInterval(() => {
+      setTimer(timer => timer-1);
+    }, 1000)
+  }, []);
+
+  useEffect(() => {
+    if (timer === 0) {
+      clear();
+    }
+  }, [timer]);
+
   return (
-    <BrowserRouter>
-      <div className="App">
-        <CustomCursor />
-        <Navigation />
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Projects" element={<Projects />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="/Optima" element={<Optima />} />
-            <Route path="/LumberJack" element={<LumberJack />} />
-            <Route path="/JungleFever" element={<JungleFever />} />
-          </Routes>
+    <>
+      <CustomCursor />
+      {preloader ? (
+        <div className="loader-wrapper">
+          <span className="pulse"></span>
+          <span className="pulse"></span>
+          <span className="pulse"></span>
         </div>
-        <Footer />
-      </div>
-    </BrowserRouter>
+      ) : (
+        <div className="App">
+          <Navigation />
+          <div className="container" data-scroll-container >
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/Projects" element={<Projects />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/MinimoOptique" element={<MinimoOptique />} />
+              <Route path="/SeaFront" element={<SeaFront />} />
+              <Route path="/CaneBack" element={<CaneBack />} />
+              <Route path="/CubicVolume" element={<CubicVolume />} />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 

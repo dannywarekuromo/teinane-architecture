@@ -4,18 +4,26 @@
     height: auto;
 }
 
+.heading-wrapper {
+    padding: var(--ws-6) var(--ws-auto);     
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+ }
+
 .hero-heading {
     font-size: 16rem;
     text-transform: uppercase;
     font-family: var(--heading-ff);
     color: var(--secondary-clr);
-    line-height: 1.6;
+    line-height: 1.2;
 }
 
-.heading-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-text {
+    font-family: var(--body-ff);
+    font-size: 16px;
+    color: var(--secondary-clr);
 }
 
 .hero-img-wrapper {
@@ -42,11 +50,5 @@
 .hero-value {
     font-size: 4rem;
     font-family: var(--body-ff);
-    color: var(--secondary-clr);
-}
-
-.hero-text {
-    font-family: var(--body-ff);
-    font-size: 16px;
     color: var(--secondary-clr);
 }

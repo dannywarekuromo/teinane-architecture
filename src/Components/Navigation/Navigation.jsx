@@ -25,7 +25,7 @@ const Navigation = () => {
   }
 
   return (
-    <header className="nav">
+    <header className="nav" data-scroll-section >
       <Link to="/" className="nav-services">
         Design, Architecture
       </Link>

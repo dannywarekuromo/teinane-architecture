@@ -8,9 +8,10 @@
 }
 
 :root {
-  --accent-clr: #a32727;
+  --accent-clr: #872823;
   --primary-clr: #f5e9e9;
   --secondary-clr: #302727;
+  --splash-clr: #f6a917;
 
   --body-ff: 'Poppins', sans-serif;
   --heading-ff: 'Playfair Display', serif;
@@ -43,5 +44,55 @@ button {
 }
 
 img {
-  min-width: 100%;
+  max-width: 100%;
+}
+
+
+/*************Preloader Animation Styling***************/
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pulse {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-clr);
+  border-radius: 50%;
+  border: 1px solid var(--primary-clr);
+  animation-name: loader;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.pulse:nth-child(1) {
+  background-color: var(--secondary-clr);
+}
+
+.pulse:nth-child(2) {
+  animation-delay: .5s;
+}
+
+.pulse:nth-child(3) {
+  background-color: #a32727;
+  animation-delay: 1.5s;
+}
+
+@keyframes loader {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.4);
+  }
 }

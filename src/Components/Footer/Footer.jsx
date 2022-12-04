@@ -6,7 +6,7 @@ const Footer = () => {
   const [hover, setHover] = useState(true);
 
   return (
-    <footer className="footer">
+    <footer className="footer" data-scroll-section >
       <div className="footer-addr-wrapper">
         <p className="footer-addr">
           Based in London, working worldwide <br />
