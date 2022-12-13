@@ -1,6 +1,9 @@
 .footer {
     background: var(--secondary-clr);
     padding: var(--ws-6) var(--ws-auto) 0px;
+    width: 100%;
+    position: relative;
+    top: 0;
 }
 
 .footer-addr {

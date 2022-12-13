@@ -1,13 +1,12 @@
 .hero {
     position: relative;
     width: 100%;
-    height: auto;
 }
 
 .heading-wrapper {
     padding: var(--ws-6) var(--ws-auto);     
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
  }
@@ -24,6 +23,7 @@
     font-family: var(--body-ff);
     font-size: 16px;
     color: var(--secondary-clr);
+    align-self: flex-end;
 }
 
 .hero-img-wrapper {

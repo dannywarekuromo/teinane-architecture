@@ -66,7 +66,7 @@ const Feature = () => {
   const [activepProject, setActiveProject] = useState(1);
 
   return (
-    <section className="feature" data-scroll-section >
+    <section className="feature" data-scroll-section>
       <div className="feature-counter">
         <span>{activepProject}</span>
       </div>

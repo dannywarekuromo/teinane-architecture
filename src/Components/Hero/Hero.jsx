@@ -6,7 +6,7 @@ const Hero = () => {
   return (
 
     <section className='hero' data-scroll-section >
-      <div className='heading-wrapper'>
+      <div className='heading-wrapper' data-scroll>
         <h1 className='hero-heading'>Teinane</h1>
         <p className='hero-text'>Walk that talk, creativity is our language.</p>
       </div>

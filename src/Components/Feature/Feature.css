@@ -1,12 +1,13 @@
 .feature {
     position: relative;
     background-color: var(--accent-clr);
-    width: 400%;
-    height: 120vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    flex-direction: column;
+    gap: 2rem;
+    padding: var(--ws-auto);
 }
 
 .feature-item {
@@ -18,7 +19,6 @@
 }
 
 .feature-image {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;

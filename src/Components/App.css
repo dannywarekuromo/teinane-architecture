@@ -25,6 +25,10 @@
   --ws-auto: 10vw;
 }
 
+main {
+  display: contents;
+}
+
 .container {
   background-color: var(--primary-clr);
 }

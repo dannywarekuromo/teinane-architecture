@@ -16,19 +16,19 @@ import "./App.css";
 function App() {
   const [preloader, setPreloader] = useState(true);
 
-  const [timer, setTimer] = useState(6);
+  const [timer, setTimer] = useState(2);
 
   const id = useRef(null);
 
   const clear = () => {
     window.clearInterval(id.current);
     setPreloader(false);
-  }
+  };
 
   useEffect(() => {
     id.current = window.setInterval(() => {
-      setTimer(timer => timer-1);
-    }, 1000)
+      setTimer((timer) => timer - 1);
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function App() {
       ) : (
         <div className="App">
           <Navigation />
-          <div className="container" data-scroll-container >
+          <div className="container" data-scroll-container>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/About" element={<About />} />
