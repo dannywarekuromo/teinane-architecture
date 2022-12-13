@@ -54,49 +54,96 @@ img {
 
 /*************Preloader Animation Styling***************/
 .loader-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100vh;
   background-color: var(--secondary-clr);
-  color: var(--primary-clr);
-  gap: 10px;
-  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pulse {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: var(--primary-clr);
-  border-radius: 50%;
-  border: 1px solid var(--primary-clr);
-  animation-name: loader;
-  animation-duration: 2s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+.arcs {
+  transform: scale(1);
 }
 
-.pulse:nth-child(1) {
-  background-color: var(--secondary-clr);
+.arc-one {
+  animation: arcframer 0.5s 3s forwards;
+  opacity: 0;
 }
 
-.pulse:nth-child(2) {
-  animation-delay: .5s;
+.arc-two {
+  animation: arcframer 0.5s 3.5s forwards;
+  opacity: 0;
 }
 
-.pulse:nth-child(3) {
-  background-color: #a32727;
-  animation-delay: 1.5s;
+.v-line {
+  animation: lineframer 1s 1s forwards;
+  opacity: 0;
 }
 
-@keyframes loader {
-  from {
-    transform: scale(1);
+.h-line {
+  animation: lineframer 1s forwards;
+  opacity: 0;
+}
+
+.circle {
+  animation: lineframer 1s 4.5s forwards;
+  opacity: 0;
+}
+
+@keyframes arcframer {
+  10% {
+    stroke-dasharray: 0, 120;
+    opacity: 0.1;
   }
+  50% {
+    stroke-dasharray: 50, 120;
+    opacity: 0.4;
+  }
+  70% {
+    stroke-dasharray: 100, 100;
+    opacity: 0.8;
+  }
+  100% {
+    stroke-dasharray: 0, 0;
+    opacity: 1;
+  }
+}
 
-  to {
-    transform: scale(0.4);
+@keyframes lineframer {
+  10% {
+    stroke-dasharray: 0, 120;
+    opacity: 0.1;
+  }
+  50% {
+    stroke-dasharray: 30, 120;
+    opacity: 0.4;
+  }
+  70% {
+    stroke-dasharray: 100, 120;
+    opacity: 0.8;
+  }
+  100% {
+    stroke-dasharray: 0, 0;
+    opacity: 1;
+  }
+}
+
+@keyframes circleframer {
+  10% {
+    stroke-dasharray: 5, 110;
+    opacity: 0.1;
+  }
+  50% {
+    stroke-dasharray: 50, 110;
+    opacity: 0.4;
+  }
+  70% {
+    stroke-dasharray: 110, 110;
+    opacity: 0.8;
+  }
+  100% {
+    stroke-dasharray: 0, 0;
+    opacity: 1;
   }
 }
