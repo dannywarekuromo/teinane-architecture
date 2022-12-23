@@ -1,113 +1,131 @@
-import React, { useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Feature.css";
-import CaneBack from "../../Assets/Images/Project-Image (4).png";
-import SeaFront from "../../Assets/Images/Project-Image (37).jpg";
-import MinimiOPtique from "../../Assets/Images/Project-Image (9).png";
-import CubicVolume from "../../Assets/Images/Project-Image (15).jpg";
-
-const projects = [
-  {
-    src: `${CaneBack}`,
-    name: "feature-project-1",
-    title: "Cane Back",
-    label: "furniture",
-    to: "/CaneBack",
-  },
-  {
-    src: `${SeaFront}`,
-    name: "feature-project-2",
-    title: "Sea Front",
-    label: "spatial design",
-    to: "/SeaFront",
-  },
-  {
-    src: `${MinimiOPtique}`,
-    name: "feature-project-3",
-    title: "Minimo Optique",
-    label: "Interior Design",
-    to: "/MinimoOptique",
-  },
-  {
-    src: `${CubicVolume}`,
-    name: "feature-project-4",
-    title: "Cubic Volume",
-    label: "architecture",
-    to: "/CubicVolume",
-  },
-];
-
-function ProjectItem({
-  src,
-  name,
-  title,
-  label,
-  to,
-  updateActiveProject,
-  index,
-}) {
-  return (
-    <div className="feature-item">
-      <div className="feature-image">
-        <img src={src} alt={name} />
-      </div>
-
-      <div className="feature-info">
-        <p className="feature-label">{label}</p>
-        <Link to={to} className="feature-title">
-          {title}
-        </Link>
-      </div>
-    </div>
-  );
-}
 
 const Feature = () => {
-  const [activepProject, setActiveProject] = useState(1);
+  gsap.registerPlugin(ScrollTrigger);
+  const featureRef = useRef();
+
+  useLayoutEffect(() => {
+    let ctx2 = gsap.context(() => {
+      let tl2 = gsap.timeline();
+
+      tl2.to(".feature-project-1", {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: ".feature",
+          scrub: true,
+          start: "top",
+          end: "+=200px",
+          pin: true
+        }
+      })
+
+      tl2.to(".feature-project-2", {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".feature",
+          scrub: true,
+          start: "+=200px",
+          pin: true
+        }
+      }, ">")
+
+      tl2.to(".feature-project-3", {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".feature",
+          scrub: true,
+          end: "bottom",
+          pin: true
+        }
+      }, ">");
+
+      gsap.to(".feature-label", {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".feature-container",
+          scrub: true,
+          end: "top 400px"
+        }
+      });
+
+      gsap.to(".feature-title", {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".feature-container",
+          scrub: true,
+          start: "top 700px"
+        }
+      });
+
+      gsap.to(".feature-desc", {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".feature-container",
+          scrub: true,
+          end: "top 400px"
+        }
+      })
+    }, featureRef)
+    
+    return () => ctx2.revert()
+  }, []);
 
   return (
-    <section className="feature" data-scroll-section>
-      <div className="feature-counter">
-        <span>{activepProject}</span>
-      </div>
+    <section className="feature" ref={featureRef}>
+      <article className="feature-container feature-project-1" id="cane-back">
+        <div className="feature-bg feature-img-1"></div>
 
-      {projects.map((project, index) => (
-        <ProjectItem
-          key={project.src}
-          index={index}
-          {...project}
-          updateActiveProject={(index) => setActiveProject(index + 1)}
-        />
-      ))}
+        <div className="feature-info">
+          <p className="feature-label">Furniture</p>
+          <Link to="/CaneBack" className="feature-title">
+            Cane Back
+          </Link>
+          <p className="feature-desc">
+            Cultivated japanese bamboo stick, resilient is its hallmark.
+          </p>
+        </div>
+      </article>
+      <article className="feature-container feature-project-2" id="sea-front">
+        <div className="feature-bg feature-img-2"></div>
 
-      {/*<ProjectItem
-        title={projects[0].title}
-        label={projects[0].label}
-        to={projects[0].to}
+        <div className="feature-info">
+          <p className="feature-label">spatial design</p>
+          <Link to="/SeaFront" className="feature-title">
+            Sea Front
+          </Link>
+          <p className="feature-desc">
+            If Poseidon made a home on land, it would overlook the ocean.
+          </p>
+        </div>
+      </article>
+      <article
+        className="feature-container feature-project-3"
+        id="minimo-optique"
       >
-        <img src={CaneBack} alt="feature-project-one" />
-      </ProjectItem>
-      <ProjectItem
-        title={projects[1].title}
-        label={projects[1].label}
-        to={projects[1].to}
-      >
-        <img src={SeaFront} alt="feature-project-two" />
-      </ProjectItem>
-      <ProjectItem
-        title={projects[2].title}
-        label={projects[2].label}
-        to={projects[2].to}
-      >
-        <img src={MinimiOPtique} alt="feature-project-three" />
-      </ProjectItem>
-      <ProjectItem
-        title={projects[3].title}
-        label={projects[3].label}
-        to={projects[3].to}
-  >
-        <img src={CubicVolume} alt="feature-project-four" />
-      </ProjectItem>*/}
+        <div className="feature-bg feature-img-3"></div>
+
+        <div className="feature-info">
+          <p className="feature-label">Interior Design</p>
+          <Link to="/MinimoOptique" className="feature-title">
+            Minimo Optique
+          </Link>
+          <p className="feature-desc">
+            Sentiments play a role in design, the rest are unnecessary. Less is
+            more.
+          </p>
+        </div>
+      </article>
+      <Link to="/Projects" className="feature-link">All Projects</Link>
     </section>
   );
 };

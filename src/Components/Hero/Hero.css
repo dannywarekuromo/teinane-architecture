@@ -4,7 +4,9 @@
 }
 
 .heading-wrapper {
-    padding: var(--ws-6) var(--ws-auto);     
+    padding: var(--ws-6) var(--ws-auto);   
+    width: 100%;
+    height: 50vh;  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,8 +17,8 @@
 
  .hero-heading {
     transform: translateY(100px);
-    transition: all .5s ease-in;
     opacity: 0;
+    transition: all 0.5 ease-in;
  }
 
 .hero-text {
@@ -24,65 +26,69 @@
     font-size: 16px;
     color: var(--secondary-clr);
     align-self: flex-end;
-    margin-top: var(--ws-4);
+    /*margin-top: var(--ws-4);*/
     transform: translateY(50px);
-    transition: all .5s ease-in;
     opacity: 0;
 }
 
 .hero-img-floater {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-left: var(--ws-6);
     padding-right: var(--ws-auto);
 }
 
-.hero-img-wrapper {
-    width: 75%;
-    height: 90%;
-    background-image: url("../../Assets/Images/Project-Image (11).jpg");
+.img-float {
+    width: 30%;
+    height: 70%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    top: -200px;
+    position: absolute;
     opacity: 0;
-    transform: scale(0.2);
-    transition: all;
+    transform: translateY(100px);
+}
+
+.hero-img-wrapper {
+    background-image: url("../../Assets/Images/Project-Image (13).jpg");
+    top: -135px;
+    left: 10%;   
 }
 
 .hero-img-wrapper-1 {
-    width: 40%;
-    height: 100%;
-    background-image: url("../../Assets/Images/Project-Image (33).jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    top: 50px;
+    background-image: url("../../Assets/Images/Project-Image (11).jpg");
+    top: 150px;
     right: 80px;
-    transform: translateX(50px);
-    opacity: 0;
-    transition: all;
 }
 
+.hero-img-wrapper-2 {
+    background-image: url("../../Assets/Images/Project-Image (37).jpg");
+    bottom: -250px;
+    left: 10%;
+}
+
+
 .hero-value-wrapper {
-    padding: 6rem var(--ws-auto);
+    padding: var(--ws-3) var(--ws-auto);
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--ws-2);
     text-align: left;
+    width: 100%;
+    min-height: 80vh;
 }
 
 .hero-value {
     font-size: 4rem;
     font-family: var(--body-ff);
     color: var(--secondary-clr);
+}
+
+.value-1, .value-2, .value-3  {
+    display: block;
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
 }

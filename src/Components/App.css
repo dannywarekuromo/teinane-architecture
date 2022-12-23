@@ -9,7 +9,7 @@
 
 :root {
   --accent-clr: #872823;
-  --primary-clr: #f5e9e9;
+  --primary-clr: #e3dcc7 /*#f5e9e9*/;
   --secondary-clr: #302727;
   --splash-clr: #f6a917;
 
@@ -67,27 +67,32 @@ img {
 }
 
 .arc-one {
-  animation: arcframer 0.5s 3s forwards;
+  animation: arcframer 0.5s 2s forwards;
   opacity: 0;
 }
 
 .arc-two {
-  animation: arcframer 0.5s 3.5s forwards;
+  animation: arcframer 0.5s 2.5s forwards;
   opacity: 0;
 }
 
 .v-line {
-  animation: lineframer 1s 1s forwards;
+  animation: lineframer .5s .5s forwards;
   opacity: 0;
 }
 
 .h-line {
-  animation: lineframer 1s forwards;
+  animation: lineframer .5s forwards;
+  opacity: 0;
+}
+
+.d-line {
+  animation: lineframer .5s 1.5s forwards;
   opacity: 0;
 }
 
 .circle {
-  animation: lineframer 1s 4.5s forwards;
+  animation: lineframer 1s 3.5s forwards;
   opacity: 0;
 }
 
