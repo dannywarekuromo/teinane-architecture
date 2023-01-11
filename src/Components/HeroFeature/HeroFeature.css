@@ -1,0 +1,117 @@
+.feature {
+  min-height: 100vh;
+  padding: 6rem var(--ws-auto);
+  position: relative;
+  /*display: grid;
+  grid-template-columns: 1fr 80%;*/
+}
+
+.feature-title {
+  font-family: var(--body-ff);
+  text-transform: uppercase;
+  color: var(--secondary-clr);
+  margin-bottom: 2rem;
+}
+
+.feature-projects {
+  border-top: 2px solid var(--secondary-clr);
+  border-bottom: 2px solid var(--secondary-clr);
+}
+
+.feature-project-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*position: relative;*/
+  z-index: 100;
+}
+
+.feature-link {
+  font-family: var(--heading-ff);
+  font-size: 4.3rem;
+  color: var(--secondary-clr);
+  transition: all 0.5s ease-in;
+  cursor: url(../../Assets/Images/feature-cursor.png) 15 15, crosshair;
+}
+
+.feature-desc {
+  font-family: var(--body-ff);
+  color: var(--secondary-clr);
+  font-size: 14px;
+}
+
+.feature-project-tile {
+  padding: 2rem 0rem;
+  /*position: relative;*/
+}
+
+.feature-project-tile:nth-child(2) {
+  border-top: 2px solid var(--secondary-clr);
+  border-bottom: 2px solid var(--secondary-clr);
+}
+
+.feature-img-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*display: none;*/
+}
+
+.tile-1 {
+  transform: translate(-50%, 30%);
+  width: 0px;
+  opacity: 0;
+}
+
+.tile-2 {
+  transform: translate(-50%, 50%);
+  width: 0px;
+  opacity: 0;
+}
+
+.tile-3 {
+  transform: translate(-50%, 30%);
+  width: 0px;
+  opacity: 0;
+}
+
+.feature-img {
+  width: 100%;
+}
+
+.feature-cta-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-project-cta {
+  font-family: var(--heading-ff);
+  color: var(--secondary-clr);
+  font-size: 8rem;
+  position: relative;
+  
+}
+
+.feature-project-cta:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 50px;
+  left: 0;
+  bottom: 0;
+  border-bottom: 2px solid var(--secondary-clr);
+  transition: all .5s ease-in;
+}
+
+.feature-project-cta:hover:before {
+  width: 100%;
+}
+
+.feature-cta-svg {
+  margin-top: 3rem;
+}
+
+
+
+

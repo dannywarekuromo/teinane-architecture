@@ -39,27 +39,72 @@
     opacity: 0.8;
     padding-bottom: 2px;
     transition: 0.3s ease-in-out;
+    position: relative;
 }
 
-.footer-sitemap > a:hover {
-    opacity: 1;
+.footer-sitemap > a::before, .footer-social > a::before {
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 0%;
+    overflow: hidden;
+    background-color: var(--secondary-clr);
+    top: 0px;
+    left: 0;
+    transition: all .5s ease-in;
 }
 
-.footer-social > a:hover {
-    opacity: 1;
+.footer-sitemap > a:hover::before, .footer-social > a:hover::before {
+    animation: hover .5s linear;
+}
+
+@keyframes hover {
+    1% {
+        height: 0%;
+        width: 0%;
+    }
+
+    50% {
+        height: 100%;
+        width: 100%;
+    }
+
+    100% {
+        height: 0%;
+        width: 0%;
+        top: 20px;
+    }
 }
 
 .footer-contact-wrapper {
-    padding-bottom: var(--ws-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.footer-contact-wrapper > a {
+.footer-cta {
     font-family: var(--heading-ff);
     color: var(--primary-clr);
     font-size: 8rem;
     text-align: justify;
     line-height: 0.8;
     transition: 0.2s ease-in-out;
+    position: relative;
+    padding-bottom: var(--ws-4);
+}
+
+.footer-cta::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 50px;
+    border-bottom: 2px solid var(--primary-clr);
+    bottom: 0;
+    transition: all .5s ease-in;
+}
+
+.footer-cta:hover::before {
+    width: 100%;
 }
 
 .footer-nav {

@@ -25,12 +25,9 @@
   --ws-auto: 10vw;
 }
 
-main {
-  display: contents;
-}
-
-.container {
+.app {
   background-color: var(--primary-clr);
+  /*overflow: hidden;*/
 }
 
 li {

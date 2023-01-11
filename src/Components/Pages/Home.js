@@ -1,12 +1,12 @@
 import React from "react";
 import Hero from "../Hero/Hero";
-import Feature from "../Feature/Feature";
+import HeroFeature from "../HeroFeature/HeroFeature";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Feature />
+      <HeroFeature />
     </main>
   );
 }

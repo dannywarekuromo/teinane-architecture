@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import Footer from "./Footer/Footer";
 import Projects from "./Pages/Projects";
 import MinimoOptique from "./Pages/MinimoOptique";
-import SeaFront from "./Pages/SeaFront";
+import OceanFront from "./Pages/OceanFront";
 import CaneBack from "./Pages/CaneBack";
 import CubicVolume from "./Pages/CubicVolume";
 import CustomCursor from "./CustomCursor/CustomCursor";
@@ -39,7 +39,6 @@ function App() {
 
   return (
     <>
-      <CustomCursor />
       {preloader ? (
         <div className="loader-wrapper">
           <svg
@@ -91,7 +90,8 @@ function App() {
           </svg>
         </div>
       ) : (
-        <div className="App">
+        <div className="app">
+          <CustomCursor />
           <Navigation />
           <div className="container" data-scroll-container>
             <Routes>
@@ -100,7 +100,7 @@ function App() {
               <Route path="/Projects" element={<Projects />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/MinimoOptique" element={<MinimoOptique />} />
-              <Route path="/SeaFront" element={<SeaFront />} />
+              <Route path="/OceanFront" element={<OceanFront />} />
               <Route path="/CaneBack" element={<CaneBack />} />
               <Route path="/CubicVolume" element={<CubicVolume />} />
             </Routes>

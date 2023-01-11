@@ -8,12 +8,24 @@
     padding: 0 var(--ws-auto);
 }
 
-.nav-services {
-    text-transform: uppercase;
-    font-family: var(--body-ff);
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--secondary-clr);
+.nav-logo {
+    display: block;
+    width: 7rem;
+    position: relative;
+}
+
+.nav-logo::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 50px;
+    border-bottom: 2px solid var(--secondary-clr);
+    bottom: 0;
+    transition: all .5s ease-in;
+}
+
+.nav-logo:hover::before {
+    width: 100%;
 }
 
 .nav-list {
@@ -27,11 +39,21 @@
 .nav-link {
     color: var(--secondary-clr);
     text-transform: uppercase;
-    transition: .5s ease-in-out;
+    position: relative;
 }
 
-.nav-link:hover ~ .app-cursor {
-    transform: scale(4);
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 50px;
+    border-bottom: 2px solid var(--secondary-clr);
+    bottom: 0;
+    transition: all .5s ease-in;
+}
+
+.nav-link:hover::before {
+    width: 100%;
 }
 
 .nav-link.active {

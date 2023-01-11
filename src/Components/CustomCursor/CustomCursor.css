@@ -2,8 +2,8 @@
     border-radius: 50%;
     background-image: radial-gradient(rgba(163, 39, 39, .7),rgba(163, 39, 39, 0),rgba(163, 39, 39, 0));
     mix-blend-mode: color-burn;
-    width: 350px;
-    height: 350px;
+    width: 600px;
+    height: 600px;
     position: fixed;
     overflow: hidden;
     pointer-events: none;
